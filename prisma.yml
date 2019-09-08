@@ -1,0 +1,10 @@
+endpoint: https://us1.prisma.sh/albert-lie/prisma-playground/dev
+datamodel: datamodel.prisma
+
+hooks:
+  post-deploy:
+    - prisma generate
+
+generate:
+  - generator: javascript-client
+    output: ./generated/prisma-client/
